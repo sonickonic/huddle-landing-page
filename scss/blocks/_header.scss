@@ -1,0 +1,18 @@
+.header {
+  padding: 2.5em;
+
+  &__logo {
+    height: 1em;
+  }
+}
+
+@include screen-l {
+  .header {
+    padding: 4.5em;
+    padding-top: 3.5em;
+
+    &__logo {
+      height: 1.65em;
+    }
+  }
+}
