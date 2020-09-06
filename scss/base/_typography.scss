@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 html {
@@ -8,9 +8,8 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
-  color: white;
+  color: $color-white;
   text-align: center;
-  width: 80%;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -29,24 +28,30 @@ body {
 }
 
 .btn {
-  color: $Violet;
+  font-family: "Poppins", sans-serif;
+  color: $color-violet;
   font-size: 1.2rem;
 }
 
 @include screen-l {
   body {
     font-size: 1.8rem;
+    text-align: left;
   }
 
   .hero {
-    text-align: left;
+    &__heading {
+      font-size: 4rem;
+      line-height: 60px;
+    }
 
-    &__header {
-      font-size: 2.5rem;
+    &__description {
+      line-height: 27px;
+      letter-spacing: -0.01em;
     }
   }
 
   .btn {
-    font-size: 1rem;
+    font-size: 1.8rem;
   }
 }

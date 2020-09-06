@@ -9,11 +9,10 @@
 
 @include screen-l {
   .header {
-    padding: 4.5em;
-    padding-top: 3.5em;
+    margin-top: 6.7rem;
 
     &__logo {
-      height: 1.65em;
+      height: 3rem;
     }
   }
 }

@@ -1,6 +1,6 @@
 /* utilities */
 /* base */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 *,
 *::after,
@@ -19,7 +19,6 @@ body {
   font-size: 1.6rem;
   color: white;
   text-align: center;
-  width: 80%;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -35,6 +34,7 @@ body {
 }
 
 .btn {
+  font-family: "Poppins", sans-serif;
   color: #674baf;
   font-size: 1.2rem;
 }
@@ -42,17 +42,20 @@ body {
 @media (min-width: 1300px) {
   body {
     font-size: 1.8rem;
-  }
-
-  .hero {
     text-align: left;
   }
-  .hero__header {
-    font-size: 2.5rem;
+
+  .hero__heading {
+    font-size: 4rem;
+    line-height: 60px;
+  }
+  .hero__description {
+    line-height: 27px;
+    letter-spacing: -0.01em;
   }
 
   .btn {
-    font-size: 1rem;
+    font-size: 1.8rem;
   }
 }
 /* blocks */
@@ -66,16 +69,16 @@ body {
 
 @media (min-width: 1300px) {
   .header {
-    padding: 4.5em;
-    padding-top: 3.5em;
+    margin-top: 6.7rem;
   }
   .header__logo {
-    height: 1.65em;
+    height: 3rem;
   }
 }
 body {
   display: flex;
   flex-direction: column;
+  width: 80%;
   background-image: url(../images/bg-mobile.svg);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -84,6 +87,7 @@ body {
 
 @media (min-width: 1300px) {
   body {
+    width: 89%;
     background-image: url(../images/bg-desktop.svg);
     background-size: auto 100%;
     min-height: 100vh;
@@ -103,9 +107,10 @@ body {
 
 @media (min-width: 1300px) {
   .hero {
-    width: 1280px;
-    margin: auto;
+    width: 100%;
+    max-width: 128rem;
     display: flex;
+    margin: 10rem auto 0;
   }
   .hero__image {
     width: 100%;
@@ -113,15 +118,11 @@ body {
     margin: 0;
   }
   .hero__container {
-    max-width: 50em;
-    margin-left: 3em;
-  }
-  .hero__heading {
-    margin: 1em 0;
-    margin-top: 0;
+    max-width: 50rem;
+    margin: 3.5rem 0 0 6rem;
   }
   .hero__description {
-    margin: 0;
+    margin: 1.5rem 0;
   }
 }
 .social__list {
@@ -146,18 +147,16 @@ body {
 }
 
 @media (min-width: 1300px) {
+  .social {
+    text-align: center;
+  }
   .social__list {
-    padding: 0 4.5em;
     display: flex;
     justify-content: flex-end;
-    margin: 1.5em 0;
+    margin: 2.7rem 0 0;
   }
   .social__list-item {
-    margin: 0.4em;
-  }
-
-  .fab {
-    width: 1.15em;
+    padding: 0.5rem 0.8rem;
   }
 }
 .btn:link, .btn:visited {
@@ -166,7 +165,7 @@ body {
   border: none;
   background-color: white;
   padding: 1.2rem 7rem;
-  border-radius: 2rem;
+  border-radius: 10rem;
   box-shadow: 0.2rem 0.2rem 0.5rem 0px rgba(0, 0, 0, 0.4);
   display: inline-block;
   transition: all 0.2s ease-out;
