@@ -15,6 +15,13 @@
     border: 0.1rem $color-white solid;
     border-radius: 100%;
     cursor: pointer;
+    animation: fade-in 1s ease-out 1.2s;
+    animation-fill-mode: backwards;
+    transition: 200ms ease-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }
 .fab {
@@ -28,7 +35,7 @@
     &__list {
       display: flex;
       justify-content: flex-end;
-      margin: 2.7rem 0 0;
+      margin: 2.7rem 0 4rem;
     }
 
     &__list-item {

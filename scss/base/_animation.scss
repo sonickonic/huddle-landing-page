@@ -82,6 +82,16 @@
   animation: animate 10s linear infinite;
 }
 
+@include screen-l {
+  .background div:nth-child(2) {
+    left: 89%;
+  }
+
+  .background div:nth-child(3) {
+    left: 90%;
+  }
+}
+
 @keyframes animate {
   0% {
     transform: scale(0) translateY(0) rotate(50deg);
@@ -93,12 +103,43 @@
   }
 }
 
-@include screen-l {
-  .background div:nth-child(2) {
-    left: 89%;
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
   }
-  
-  .background div:nth-child(3) {
-    left: 90%;
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(15rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

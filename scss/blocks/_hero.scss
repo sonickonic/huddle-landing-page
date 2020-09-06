@@ -1,14 +1,16 @@
 .hero {
   z-index: 1;
-  
+
   &__image {
     margin: 6rem 0 6rem;
     max-width: 70rem;
+    animation: moveInLeft 1s ease-out;
   }
 
   &__container {
     margin: auto;
     max-width: 40rem;
+    animation: moveInRight 1s ease-out;
   }
 
   &__description {

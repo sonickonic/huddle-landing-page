@@ -129,6 +129,15 @@ body {
   animation: animate 10s linear infinite;
 }
 
+@media (min-width: 1300px) {
+  .background div:nth-child(2) {
+    left: 89%;
+  }
+
+  .background div:nth-child(3) {
+    left: 90%;
+  }
+}
 @keyframes animate {
   0% {
     transform: scale(0) translateY(0) rotate(50deg);
@@ -139,13 +148,38 @@ body {
     opacity: 0;
   }
 }
-@media (min-width: 1300px) {
-  .background div:nth-child(2) {
-    left: 89%;
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
   }
-
-  .background div:nth-child(3) {
-    left: 90%;
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(15rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 /* blocks */
@@ -156,6 +190,8 @@ body {
 }
 .header__logo {
   height: 1.9rem;
+  animation: fade-in 1s ease-out 1.2s;
+  animation-fill-mode: backwards;
 }
 
 @media (min-width: 1300px) {
@@ -190,10 +226,12 @@ body {
 .hero__image {
   margin: 6rem 0 6rem;
   max-width: 70rem;
+  animation: moveInLeft 1s ease-out;
 }
 .hero__container {
   margin: auto;
   max-width: 40rem;
+  animation: moveInRight 1s ease-out;
 }
 .hero__description {
   margin: 1rem 0;
@@ -236,6 +274,12 @@ body {
   border: 0.1rem white solid;
   border-radius: 100%;
   cursor: pointer;
+  animation: fade-in 1s ease-out 1.2s;
+  animation-fill-mode: backwards;
+  transition: 200ms ease-out;
+}
+.social__list-item:hover {
+  transform: scale(1.2);
 }
 
 .fab {
@@ -250,7 +294,7 @@ body {
   .social__list {
     display: flex;
     justify-content: flex-end;
-    margin: 2.7rem 0 0;
+    margin: 2.7rem 0 4rem;
   }
   .social__list-item {
     padding: 0.5rem 0.8rem;
