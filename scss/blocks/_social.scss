@@ -1,12 +1,17 @@
-.footer {
+.social {
   &__list {
-    margin: 2.5em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 6.4rem;
+    margin-bottom: 4rem;
   }
 
   &__list-item {
-    margin: 0.2em;
-    padding: 0.5em;
-    border: 1px white solid;
+    list-style: none;
+    margin: 0 0.5rem;
+    padding: 0.3rem 0.6rem;
+    border: 0.1rem white solid;
     border-radius: 100%;
     cursor: pointer;
   }
@@ -16,21 +21,8 @@
   width: 1em;
 }
 
-.footer-frontendmaster {
-  padding: 0.2em;
-
-  &__attribution {
-    font-size: 11px;
-    text-align: center;
-
-    a {
-      color: hsl(228, 45%, 44%);
-    }
-  }
-}
-
 @include screen-l {
-  .footer {
+  .social {
     &__list {
       padding: 0 4.5em;
       display: flex;
